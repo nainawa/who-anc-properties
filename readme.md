@@ -19,6 +19,8 @@ To use this tool, we need to have Python installed in our system. This tool is b
 
 ## Usage
 
+**Note:** Please backup your work before proceeding.
+
 ### Preparation
 
 This tool works using command line. First, clone this repository to our computer. Alternatively, just download the ZIP file of this repository.
@@ -62,3 +64,20 @@ anc_profile_ind.properties                         |
 ```
 
 Now, we can use spreadsheet editor to manage translations instead of editing each translation files line-by-line which is daunting, time consuming, and error-prone.
+
+### Working with CSV files
+
+Please wait, I'm working on this.
+
+### Generate CSV files to .properties
+
+Please wait, I'm working on this, too.
+
+## Bugs and Issues
+
+If you found bugs, error, or having issues when working with this tool, please [create an issue](https://github.com/nainawa/who-anc-properties/issues) on this repository.
+
+## Contribution
+
+This tool is an open source, everyone can help to make the world a better place. Or, at least make this tool better.
+If you are considering to contribute to this repository, you can help solve unresolved issues or maybe suggesting features to improve this tool.

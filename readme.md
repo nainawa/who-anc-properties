@@ -29,4 +29,36 @@ $ git clone https://github.com/nainawa/who-anc-properties.git
 
 Then, make sure there is WHO ANC application source code in our computer. This is not absolutely necessary, but it will make it easier to build and debug the app later. The `.properties` files are located in `/opensrp-anc/src/main/resources/` directory of the source code. WHO ANC application is using these files to generate form strings. So, we need to briefly understand how it works.
 
-WHO ANC application is using `opensrp-client-native-form` library to handle forms and its translation. To learn more about `.properties` files and how form works in the app, read more in [its repository](https://github.com/opensrp/opensrp-client-native-form).
+WHO ANC application is using `opensrp-client-native-form` library to handle forms and its translation. To learn more about `.properties` files and how form works in the app, read more on [its repository](https://github.com/opensrp/opensrp-client-native-form).
+
+### Convert .properties files to CSV
+
+Enter the directory of this tool, then use `convert` command to convert `.properties` files to CSV.
+
+```
+python props.py convert <source_directory>
+```
+
+Change the `<source_directory>` to the path of where we store WHO ANC source code. For example, if it is inside home folder and named `who-anc-client`, the command will look like this:
+
+```
+python props.py convert "~/who-anc-client"
+```
+
+This command will merge multiple languages `.properties` files to a single CSV file for each `.properties` name to the `csv` folder. For example:
+
+```
+-------------------------------------------------------------------------------------
+ WHO ANC source (/opensrp-anc/src/main/resources/) |       Output folder (csv)
+-------------------------------------------------------------------------------------
+anc_physical_exam.properties                       | anc_physical_exam.csv
+anc_physical_exam_fr.properties                    |
+anc_physical_exam_ind.properties                   |
+anc_profile.properties                             | anc_profile.csv
+anc_profile_fr.properties                          |
+anc_profile_ind.properties                         |
+...                                                | ...
+-------------------------------------------------------------------------------------
+```
+
+Now, we can use spreadsheet editor to manage translations instead of editing each translation files line-by-line which is daunting, time consuming, and error-prone.

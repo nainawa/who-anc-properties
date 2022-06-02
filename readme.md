@@ -71,7 +71,13 @@ Please wait, I'm working on this.
 
 ### Generate CSV files to .properties
 
-Please wait, I'm working on this, too.
+If we are done editing translations in the CSV files, we can generate them back to `.properties` files using `generate` command.
+
+```
+$ python props.py generate
+```
+
+This command will check for missing translations. If there is none, it will generate `.properties` files to `properties` folder. Then we can copy these files and overwrite the `.properties` files inside the application source code.
 
 ## Bugs and Issues
 

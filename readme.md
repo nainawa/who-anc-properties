@@ -37,6 +37,8 @@ WHO ANC application is using `opensrp-client-native-form` library to handle form
 
 Enter the directory of this tool, then use `convert` command to convert `.properties` files to CSV.
 
+https://user-images.githubusercontent.com/106649086/171562921-82f5d347-8c37-4c7d-aa4f-1a71fd711145.mov
+
 ```
 python props.py convert <source_directory>
 ```
@@ -67,11 +69,17 @@ Now, we can use spreadsheet editor to manage translations instead of editing eac
 
 ### Working with CSV files
 
-Please wait, I'm working on this.
+You can edit the generated CSV files directly on Microsot Excel or Google Sheets or any editor that you can use.
+
+<img width="1920" alt="generated_csv" src="https://user-images.githubusercontent.com/106649086/171563308-b8c0b591-f7fe-4461-abb3-75452e9e7535.png">
+
+The first column is the key that will be used as identifier inside the application form definition. The later columns are the string value and its translations. To add more language, don't forget to add them at the first row. For example in screenshot above, "ind" (Bahasa Indonesia) is added after "default" (English) column.
 
 ### Generate CSV files to .properties
 
 If we are done editing translations in the CSV files, we can generate them back to `.properties` files using `generate` command.
+
+https://user-images.githubusercontent.com/106649086/171564353-8ef54d98-7ff6-42d0-85bd-dcc54768a202.mov
 
 ```
 $ python props.py generate
